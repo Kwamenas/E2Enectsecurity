@@ -1,0 +1,3 @@
+[ 2025-11-06 22:16:09,551 ] 33 root - INFO - Monogo Client initialized Sucessfully 
+[ 2025-11-06 22:16:09,681 ] 42 root - INFO - Successfully converted 11055 rows from notebook\data\phisingData.csv to JSON
+[ 2025-11-06 22:16:23,265 ] 52 root - INFO - Inserted 11055 records into KNAS68.NetworkData

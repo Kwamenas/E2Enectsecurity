@@ -1,0 +1,9 @@
+[ 2025-11-06 22:15:06,040 ] 33 root - INFO - Monogo Client initialized Sucessfully 
+[ 2025-11-06 22:15:06,188 ] 42 root - INFO - Successfully converted 11055 rows from notebook\data\phisingData.csv to JSON
+[ 2025-11-06 22:15:08,211 ] 17 root - ERROR - Exception type: AttributeError
+Message: 'DataExtraction' object has no attribute 'collection'
+Traceback:   File "C:\Users\HP\Desktop\ML Projects\network sys\push_data.py", line 50, in insert_into_MongoDB
+    coll=db[self.collection]
+            ^^^^^^^^^^^^^^^
+
+
