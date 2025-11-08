@@ -19,9 +19,10 @@ class DataIngestionConfig:
     
     artifact_dir :Path= Path("artifacts")
     feature_store:Path=artifact_dir/"feature_Store"
-    train_path: Path=artifact_dir/"train.csv"
-    valid_path: Path=artifact_dir/"valid.csv"
-    test_path: Path=artifact_dir/"test.csv"
+    ingest:Path=artifact_dir/"Ingest"
+    train_path: Path=ingest/"train.csv"
+    valid_path: Path=ingest/"valid.csv"
+    test_path: Path=ingest/"test.csv"
 
 class DataIngest:
     def __init__(self):
@@ -29,8 +30,9 @@ class DataIngest:
             self.data_ingest=DataIngestionConfig()
             self.extractor=DataExtraction()
 
-            os.makedirs(self.data_ingest.feature_store,exist_ok=True)
             os.makedirs(self.data_ingest.artifact_dir,exist_ok=True)
+            os.makedirs(self.data_ingest.feature_store,exist_ok=True)
+            os.makedirs(self.data_ingest.ingest,exist_ok=True)
 
             logging.info("DataIngest class initialized successfully.")
         except Exception as e:
@@ -43,6 +45,7 @@ class DataIngest:
             logging.info(f"Successfully fetched {len(df)} records from MongoDB.")
             df.to_csv(self.data_ingest.feature_store/"raw_data.csv",index=False)
             logging.info(f"Data successfully fetched and saved to feature store")
+            return df
         except Exception as e:
             raise CustomException(e)
         

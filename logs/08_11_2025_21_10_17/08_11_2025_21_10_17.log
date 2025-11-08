@@ -1,0 +1,12 @@
+[ 2025-11-08 21:10:29,801 ] 10 root - INFO - Starting Data Ingestion Pipeline...
+[ 2025-11-08 21:10:30,797 ] 40 root - INFO - MongoDB client initialized successfully 
+[ 2025-11-08 21:10:30,797 ] 37 root - INFO - DataIngest class initialized successfully.
+[ 2025-11-08 21:11:18,703 ] 72 root - INFO - fetched 11055 documents from KNAS68.NetworkData
+[ 2025-11-08 21:11:18,710 ] 45 root - INFO - Successfully fetched 11055 records from MongoDB.
+[ 2025-11-08 21:11:18,787 ] 47 root - INFO - Data successfully fetched and saved to feature store
+[ 2025-11-08 21:11:18,787 ] 54 root - INFO - Train test split initiation
+[ 2025-11-08 21:11:18,879 ] 62 root - INFO - Train data saved to artifacts\Ingest\train.csv
+[ 2025-11-08 21:11:18,879 ] 63 root - INFO - Valid data saved to artifacts\Ingest\valid.csv
+[ 2025-11-08 21:11:18,879 ] 64 root - INFO - Test data saved to artifacts\Ingest\test.csv
+[ 2025-11-08 21:11:18,879 ] 65 root - INFO - Data Split Conpleted
+[ 2025-11-08 21:11:18,879 ] 16 root - INFO - Data ingestion pipeline completed successfully.
