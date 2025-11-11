@@ -69,6 +69,7 @@ class DataExtraction():
             coll=db[self.collection]
             data=list(coll.find())
             df=pd.DataFrame(data)
+            df=df.drop(columns=['_id'])
             logging.info(f"fetched {len(df)} documents from {self.database}.{self.collection}")
             return df
         except Exception as e:

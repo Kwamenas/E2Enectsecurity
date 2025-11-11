@@ -1,0 +1,49 @@
+[ 2025-11-11 18:56:53,640 ] 11 root - INFO - Starting Data Ingestion Pipeline...
+[ 2025-11-11 18:56:54,477 ] 40 root - INFO - MongoDB client initialized successfully 
+[ 2025-11-11 18:56:54,486 ] 37 root - INFO - DataIngest class initialized successfully.
+[ 2025-11-11 18:57:01,404 ] 73 root - INFO - fetched 11055 documents from KNAS68.NetworkData
+[ 2025-11-11 18:57:01,404 ] 45 root - INFO - Successfully fetched 11055 records from MongoDB.
+[ 2025-11-11 18:57:01,468 ] 47 root - INFO - Data successfully fetched and saved to feature store
+[ 2025-11-11 18:57:01,468 ] 54 root - INFO - Train test split initiation
+[ 2025-11-11 18:57:01,526 ] 62 root - INFO - Train data saved to artifacts\Ingest\train.csv
+[ 2025-11-11 18:57:01,528 ] 63 root - INFO - Valid data saved to artifacts\Ingest\valid.csv
+[ 2025-11-11 18:57:01,528 ] 64 root - INFO - Test data saved to artifacts\Ingest\test.csv
+[ 2025-11-11 18:57:01,528 ] 65 root - INFO - Data Split Conpleted
+[ 2025-11-11 18:57:01,528 ] 50 root - INFO - All validation directories created successfully.
+[ 2025-11-11 18:57:01,567 ] 64 root - INFO - Data schema created at: data_schema\data_schema.yaml
+[ 2025-11-11 18:57:01,642 ] 35 root - INFO - Required number of cols:31
+[ 2025-11-11 18:57:01,642 ] 36 root - INFO - DataFrame has columns:Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2025-11-11 18:57:01,642 ] 35 root - INFO - Required number of cols:31
+[ 2025-11-11 18:57:01,642 ] 36 root - INFO - DataFrame has columns:Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2025-11-11 18:57:01,642 ] 35 root - INFO - Required number of cols:31
+[ 2025-11-11 18:57:01,642 ] 36 root - INFO - DataFrame has columns:Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2025-11-11 18:57:01,718 ] 64 root - INFO - Drift report written to: artifacts\validation\drift_report\report.yaml
+[ 2025-11-11 18:57:01,771 ] 114 root - INFO - Validated files saved to: artifacts\validation\validated
+[ 2025-11-11 18:57:01,771 ] 22 root - INFO - Data ingestion and validation pipeline completed successfully.
