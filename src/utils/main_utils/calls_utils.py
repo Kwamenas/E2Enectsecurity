@@ -5,6 +5,8 @@ import os
 import yaml
 from pandas import DataFrame
 from scipy.stats import ks_2samp
+import pickle as pk
+import numpy as np
 
 def creat_yaml_file(file_path:str|Path, content:object,replace: bool=False) ->None:
     try:
@@ -67,3 +69,30 @@ def drift_check(drift_file_path,base_df,current_df,threshold=0.05)-> bool:
     except Exception as e:
         raise CustomException(e)
     
+
+def save_object(file_path:str|Path,obj):
+    try:
+        dir_path=Path(file_path).parent
+        dir_path.mkdir(parents=True,exist_ok=True)
+
+        with open(file_path,"wb") as file_obj:
+            pk.dump(obj,file_obj)
+    except Exception as e:
+        raise CustomException(e)
+    
+def load_object(file_path:str|Path):
+    try:
+        with open(file_path,"rb") as file_obj:
+            pk.load (file_obj)
+    except Exception as e:
+        raise CustomException(e)
+    
+def save_numpy_array_data(file_path:str|Path,array: np.array):
+    try:
+        dir_path=Path(file_path).parent
+        dir_path.mkdir(parents=True,exist_ok=True)
+
+        with open(file_path,"wb") as file_obj:
+            np.save(file_obj,array)
+    except Exception as e:
+        raise CustomException(e)
