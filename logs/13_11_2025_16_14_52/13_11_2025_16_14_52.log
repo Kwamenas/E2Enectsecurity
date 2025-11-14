@@ -1,0 +1,82 @@
+[ 2025-11-13 16:14:54,495 ] 13 root - INFO - Starting Data Ingestion Pipeline...
+[ 2025-11-13 16:14:54,900 ] 40 root - INFO - MongoDB client initialized successfully 
+[ 2025-11-13 16:14:54,900 ] 37 root - INFO - DataIngest class initialized successfully.
+[ 2025-11-13 16:14:59,986 ] 73 root - INFO - fetched 11055 documents from KNAS68.NetworkData
+[ 2025-11-13 16:15:00,008 ] 45 root - INFO - Successfully fetched 11055 records from MongoDB.
+[ 2025-11-13 16:15:00,064 ] 47 root - INFO - Data successfully fetched and saved to feature store
+[ 2025-11-13 16:15:00,064 ] 54 root - INFO - Train test split initiation
+[ 2025-11-13 16:15:00,128 ] 62 root - INFO - Train data saved to artifacts\Ingest\train.csv
+[ 2025-11-13 16:15:00,128 ] 63 root - INFO - Valid data saved to artifacts\Ingest\valid.csv
+[ 2025-11-13 16:15:00,128 ] 64 root - INFO - Test data saved to artifacts\Ingest\test.csv
+[ 2025-11-13 16:15:00,128 ] 65 root - INFO - Data Split Conpleted
+[ 2025-11-13 16:15:00,129 ] 50 root - INFO - All validation directories created successfully.
+[ 2025-11-13 16:15:00,172 ] 64 root - INFO - Data schema created at: data_schema\data_schema.yaml
+[ 2025-11-13 16:15:00,244 ] 37 root - INFO - Required number of cols:31
+[ 2025-11-13 16:15:00,244 ] 38 root - INFO - DataFrame has columns:Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2025-11-13 16:15:00,244 ] 37 root - INFO - Required number of cols:31
+[ 2025-11-13 16:15:00,244 ] 38 root - INFO - DataFrame has columns:Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2025-11-13 16:15:00,248 ] 37 root - INFO - Required number of cols:31
+[ 2025-11-13 16:15:00,248 ] 38 root - INFO - DataFrame has columns:Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2025-11-13 16:15:00,321 ] 66 root - INFO - Drift report written to: artifacts\validation\drift_report\report.yaml
+[ 2025-11-13 16:15:00,369 ] 114 root - INFO - Validated files saved to: artifacts\validation\validated
+[ 2025-11-13 16:15:00,369 ] 24 root - INFO - Data ingestion and validation pipeline completed successfully.
+[ 2025-11-13 16:15:00,369 ] 29 root - INFO - Starting Data Transformation Pipeline...
+[ 2025-11-13 16:15:00,401 ] 40 root - INFO - Loaded train data from artifacts\validation\validated successfully
+[ 2025-11-13 16:15:00,403 ] 43 root - INFO - Columns have been split into cat_cols: [] and numeric_cols: ['having_IP_Address', 'URL_Length', 'Shortining_Service', 'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix', 'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length', 'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor', 'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL', 'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe', 'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank', 'Google_Index', 'Links_pointing_to_page', 'Statistical_report']
+[ 2025-11-13 16:15:00,473 ] 40 root - INFO - Loaded train data from artifacts\validation\validated successfully
+[ 2025-11-13 16:15:00,475 ] 43 root - INFO - Columns have been split into cat_cols: [] and numeric_cols: ['having_IP_Address', 'URL_Length', 'Shortining_Service', 'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix', 'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length', 'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor', 'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL', 'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe', 'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank', 'Google_Index', 'Links_pointing_to_page', 'Statistical_report']
+[ 2025-11-13 16:15:00,477 ] 77 root - INFO - Applying preprocessing object on datasets
+[ 2025-11-13 16:15:00,504 ] 39 root - INFO - Loading numpy files from transformed path
+[ 2025-11-13 16:15:00,570 ] 44 root - INFO - resplitting the array in to X_train,y_train
+[ 2025-11-13 16:15:00,570 ] 17 root - ERROR - Exception type: TypeError
+Message: GridSearchCV.__init__() takes 3 positional arguments but 4 positional arguments (and 2 keyword-only arguments) were given
+Traceback:   File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\src\utils\ml_utils\ml_calls.py", line 31, in train_evaluate_model
+    gs=GridSearchCV(model,param_grid[model_name],cv,verbose=2,n_jobs=-1)
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+[ 2025-11-13 16:15:00,571 ] 17 root - ERROR - Exception type: CustomException
+Message: Exception type: TypeError
+Message: GridSearchCV.__init__() takes 3 positional arguments but 4 positional arguments (and 2 keyword-only arguments) were given
+Traceback:   File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\src\utils\ml_utils\ml_calls.py", line 31, in train_evaluate_model
+    gs=GridSearchCV(model,param_grid[model_name],cv,verbose=2,n_jobs=-1)
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Traceback:   File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\main.py", line 45, in <module>
+    best_model_name, best_model_score, best_model = model_trainer.evaluate_train_model()
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\src\components\model_trainer.py", line 100, in evaluate_train_model
+    df=train_evaluate_model(models=models,X_train=X_train,y_train=y_train,
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\src\utils\ml_utils\ml_calls.py", line 63, in train_evaluate_model
+    raise CustomException(e)
+
+

@@ -1,0 +1,77 @@
+[ 2025-11-13 16:14:08,570 ] 13 root - INFO - Starting Data Ingestion Pipeline...
+[ 2025-11-13 16:14:09,312 ] 40 root - INFO - MongoDB client initialized successfully 
+[ 2025-11-13 16:14:09,321 ] 37 root - INFO - DataIngest class initialized successfully.
+[ 2025-11-13 16:14:13,829 ] 73 root - INFO - fetched 11055 documents from KNAS68.NetworkData
+[ 2025-11-13 16:14:13,837 ] 45 root - INFO - Successfully fetched 11055 records from MongoDB.
+[ 2025-11-13 16:14:13,893 ] 47 root - INFO - Data successfully fetched and saved to feature store
+[ 2025-11-13 16:14:13,893 ] 54 root - INFO - Train test split initiation
+[ 2025-11-13 16:14:13,954 ] 62 root - INFO - Train data saved to artifacts\Ingest\train.csv
+[ 2025-11-13 16:14:13,954 ] 63 root - INFO - Valid data saved to artifacts\Ingest\valid.csv
+[ 2025-11-13 16:14:13,954 ] 64 root - INFO - Test data saved to artifacts\Ingest\test.csv
+[ 2025-11-13 16:14:13,954 ] 65 root - INFO - Data Split Conpleted
+[ 2025-11-13 16:14:13,957 ] 50 root - INFO - All validation directories created successfully.
+[ 2025-11-13 16:14:13,994 ] 64 root - INFO - Data schema created at: data_schema\data_schema.yaml
+[ 2025-11-13 16:14:14,075 ] 37 root - INFO - Required number of cols:31
+[ 2025-11-13 16:14:14,075 ] 38 root - INFO - DataFrame has columns:Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2025-11-13 16:14:14,075 ] 37 root - INFO - Required number of cols:31
+[ 2025-11-13 16:14:14,075 ] 38 root - INFO - DataFrame has columns:Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2025-11-13 16:14:14,075 ] 37 root - INFO - Required number of cols:31
+[ 2025-11-13 16:14:14,075 ] 38 root - INFO - DataFrame has columns:Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2025-11-13 16:14:14,154 ] 66 root - INFO - Drift report written to: artifacts\validation\drift_report\report.yaml
+[ 2025-11-13 16:14:14,210 ] 114 root - INFO - Validated files saved to: artifacts\validation\validated
+[ 2025-11-13 16:14:14,210 ] 24 root - INFO - Data ingestion and validation pipeline completed successfully.
+[ 2025-11-13 16:14:14,210 ] 29 root - INFO - Starting Data Transformation Pipeline...
+[ 2025-11-13 16:14:14,237 ] 40 root - INFO - Loaded train data from artifacts\validation\validated successfully
+[ 2025-11-13 16:14:14,239 ] 43 root - INFO - Columns have been split into cat_cols: [] and numeric_cols: ['having_IP_Address', 'URL_Length', 'Shortining_Service', 'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix', 'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length', 'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor', 'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL', 'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe', 'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank', 'Google_Index', 'Links_pointing_to_page', 'Statistical_report']
+[ 2025-11-13 16:14:14,310 ] 40 root - INFO - Loaded train data from artifacts\validation\validated successfully
+[ 2025-11-13 16:14:14,312 ] 43 root - INFO - Columns have been split into cat_cols: [] and numeric_cols: ['having_IP_Address', 'URL_Length', 'Shortining_Service', 'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix', 'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length', 'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor', 'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL', 'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe', 'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank', 'Google_Index', 'Links_pointing_to_page', 'Statistical_report']
+[ 2025-11-13 16:14:14,314 ] 77 root - INFO - Applying preprocessing object on datasets
+[ 2025-11-13 16:14:14,340 ] 17 root - ERROR - Exception type: AttributeError
+Message: 'Modelconfig' object has no attribute 'preprocessing_path'
+Traceback:   File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\src\components\model_trainer.py", line 30, in __init__
+    os.makedirs(self.modelconfig.preprocessing_path,exist_ok=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+[ 2025-11-13 16:14:14,345 ] 17 root - ERROR - Exception type: CustomException
+Message: Exception type: AttributeError
+Message: 'Modelconfig' object has no attribute 'preprocessing_path'
+Traceback:   File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\src\components\model_trainer.py", line 30, in __init__
+    os.makedirs(self.modelconfig.preprocessing_path,exist_ok=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Traceback:   File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\main.py", line 44, in <module>
+    model_trainer=Modelinitiation()
+                  ^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\src\components\model_trainer.py", line 34, in __init__
+    raise CustomException(e)
+
+

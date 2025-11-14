@@ -1,0 +1,94 @@
+[ 2025-11-13 18:35:59,610 ] 13 root - INFO - Starting Data Ingestion Pipeline...
+[ 2025-11-13 18:36:00,100 ] 40 root - INFO - MongoDB client initialized successfully 
+[ 2025-11-13 18:36:00,100 ] 37 root - INFO - DataIngest class initialized successfully.
+[ 2025-11-13 18:36:10,808 ] 73 root - INFO - fetched 11055 documents from KNAS68.NetworkData
+[ 2025-11-13 18:36:10,816 ] 45 root - INFO - Successfully fetched 11055 records from MongoDB.
+[ 2025-11-13 18:36:10,874 ] 47 root - INFO - Data successfully fetched and saved to feature store
+[ 2025-11-13 18:36:10,874 ] 54 root - INFO - Train test split initiation
+[ 2025-11-13 18:36:10,944 ] 62 root - INFO - Train data saved to artifacts\Ingest\train.csv
+[ 2025-11-13 18:36:10,944 ] 63 root - INFO - Valid data saved to artifacts\Ingest\valid.csv
+[ 2025-11-13 18:36:10,944 ] 64 root - INFO - Test data saved to artifacts\Ingest\test.csv
+[ 2025-11-13 18:36:10,944 ] 65 root - INFO - Data Split Conpleted
+[ 2025-11-13 18:36:10,944 ] 50 root - INFO - All validation directories created successfully.
+[ 2025-11-13 18:36:10,988 ] 64 root - INFO - Data schema created at: data_schema\data_schema.yaml
+[ 2025-11-13 18:36:11,057 ] 37 root - INFO - Required number of cols:31
+[ 2025-11-13 18:36:11,057 ] 38 root - INFO - DataFrame has columns:Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2025-11-13 18:36:11,057 ] 37 root - INFO - Required number of cols:31
+[ 2025-11-13 18:36:11,057 ] 38 root - INFO - DataFrame has columns:Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2025-11-13 18:36:11,072 ] 37 root - INFO - Required number of cols:31
+[ 2025-11-13 18:36:11,072 ] 38 root - INFO - DataFrame has columns:Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2025-11-13 18:36:11,137 ] 66 root - INFO - Drift report written to: artifacts\validation\drift_report\report.yaml
+[ 2025-11-13 18:36:11,196 ] 114 root - INFO - Validated files saved to: artifacts\validation\validated
+[ 2025-11-13 18:36:11,196 ] 24 root - INFO - Data ingestion and validation pipeline completed successfully.
+[ 2025-11-13 18:36:11,196 ] 29 root - INFO - Starting Data Transformation Pipeline...
+[ 2025-11-13 18:36:11,225 ] 40 root - INFO - Loaded train data from artifacts\validation\validated successfully
+[ 2025-11-13 18:36:11,226 ] 43 root - INFO - Columns have been split into cat_cols: [] and numeric_cols: ['having_IP_Address', 'URL_Length', 'Shortining_Service', 'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix', 'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length', 'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor', 'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL', 'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe', 'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank', 'Google_Index', 'Links_pointing_to_page', 'Statistical_report']
+[ 2025-11-13 18:36:11,290 ] 40 root - INFO - Loaded train data from artifacts\validation\validated successfully
+[ 2025-11-13 18:36:11,290 ] 43 root - INFO - Columns have been split into cat_cols: [] and numeric_cols: ['having_IP_Address', 'URL_Length', 'Shortining_Service', 'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix', 'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length', 'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor', 'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL', 'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe', 'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank', 'Google_Index', 'Links_pointing_to_page', 'Statistical_report']
+[ 2025-11-13 18:36:11,290 ] 77 root - INFO - Applying preprocessing object on datasets
+[ 2025-11-13 18:36:11,327 ] 39 root - INFO - Loading numpy files from transformed path
+[ 2025-11-13 18:36:11,362 ] 44 root - INFO - resplitting the array in to X_train,y_train
+[ 2025-11-13 18:36:11,362 ] 24 root - INFO - Starting GridSearchCV for Random Forest
+[ 2025-11-13 18:36:22,253 ] 31 root - INFO - Best parameters for Random Forest: {'max_features': 'log2', 'n_estimators': 256}
+[ 2025-11-13 18:36:22,638 ] 24 root - INFO - Starting GridSearchCV for Decision Tree
+[ 2025-11-13 18:36:22,890 ] 31 root - INFO - Best parameters for Decision Tree: {'criterion': 'entropy'}
+[ 2025-11-13 18:36:22,908 ] 24 root - INFO - Starting GridSearchCV for Gradient Boosting
+[ 2025-11-13 18:37:18,317 ] 31 root - INFO - Best parameters for Gradient Boosting: {'learning_rate': 0.1, 'n_estimators': 256, 'subsample': 0.75}
+[ 2025-11-13 18:37:18,386 ] 24 root - INFO - Starting GridSearchCV for Logistic Regression
+[ 2025-11-13 18:37:18,608 ] 31 root - INFO - Best parameters for Logistic Regression: {}
+[ 2025-11-13 18:37:18,624 ] 24 root - INFO - Starting GridSearchCV for Adaboost
+[ 2025-11-13 18:37:33,149 ] 31 root - INFO - Best parameters for Adaboost: {'learning_rate': 0.1, 'n_estimators': 256}
+[ 2025-11-13 18:37:33,473 ] 24 root - INFO - Starting GridSearchCV for Xgboost
+[ 2025-11-13 18:41:36,062 ] 31 root - INFO - Best parameters for Xgboost: {'booster': 'gbtree', 'learning_rate': 0.1, 'n_estimators': 256}
+[ 2025-11-13 18:41:36,151 ] 119 root - INFO - Best model is Random Forest
+[ 2025-11-13 18:41:36,151 ] 17 root - ERROR - Exception type: PermissionError
+Message: [Errno 13] Permission denied: 'final_model\\model.pkl'
+Traceback:   File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\src\utils\main_utils\calls_utils.py", line 78, in save_object
+    with open(file_path,"wb") as file_obj:
+         ^^^^^^^^^^^^^^^^^^^^
+
+
+[ 2025-11-13 18:41:36,154 ] 17 root - ERROR - Exception type: CustomException
+Message: Exception type: PermissionError
+Message: [Errno 13] Permission denied: 'final_model\\model.pkl'
+Traceback:   File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\src\utils\main_utils\calls_utils.py", line 78, in save_object
+    with open(file_path,"wb") as file_obj:
+         ^^^^^^^^^^^^^^^^^^^^
+
+
+Traceback:   File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\main.py", line 45, in <module>
+    best_model_name, best_model_score, best_model = model_trainer.evaluate_train_model()
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\src\components\model_trainer.py", line 121, in evaluate_train_model
+    save_object(self.modelconfig.model_path,best_model)
+  File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\src\utils\main_utils\calls_utils.py", line 81, in save_object
+    raise CustomException(e)
+
+

@@ -4,6 +4,7 @@ from src.components.data_extraction import DataExtraction
 from src.components.data_ingestion import DataIngestionConfig,DataIngest
 from src.components.data_validation import DatavalidationConfig,DataValidation
 from src.components.data_transformation import DataTransform,DataTransformationConfig
+from src.components.model_trainer import Modelconfig,Modelinitiation
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -33,14 +34,19 @@ if __name__=="__main__":
                                                                                    validation_config.valid_validated,
                                                                                    validation_config.test_validated )
                                                                                    
-
-
-
+                                                                                   
+                                                                                   
     except Exception as e:
         raise CustomException(e)
 
 
-    
+    try:
+        model_trainer=Modelinitiation()
+        best_model_name, best_model_score, best_model = model_trainer.evaluate_train_model()
+        logging.info(f"✅ Training complete. Best model: {best_model_name} (F1: {best_model_score:.4f})")
+        logging.info(f"✅ Training complete. Best model: {best_model} )")
+    except Exception as e:
+        raise CustomException(e)
 
 
     
