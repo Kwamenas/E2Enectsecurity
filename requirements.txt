@@ -8,4 +8,6 @@ scikit-learn
 PyYAML
 ipykernel
 xgboost
+mlflow
+dagshub
 ##-e .

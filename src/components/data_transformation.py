@@ -17,10 +17,12 @@ from src.utils.main_utils.calls_utils import save_object,save_numpy_array_data
 
 class DataTransformationConfig:
     artifact_dir :Path= Path("artifacts")
+    final_model :Path=Path("final_model")
     data_transformation_dir:Path= artifact_dir/"data_transformation"
     transformed_object:Path= data_transformation_dir/"transformed"
     transformed_files= data_transformation_dir/"transformedfiles"
     preprocessing_path: Path=transformed_object/"preprocess.pkl"
+    final_preprocessing_path: Path=final_model/"preprocess.pkl"
 
 class DataTransform:
     def __init__(self):
@@ -28,6 +30,7 @@ class DataTransform:
             self.trans_config=DataTransformationConfig()
             self.config=DatavalidationConfig()
             os.makedirs(self.trans_config.artifact_dir,exist_ok=True)
+            os.makedirs(self.trans_config.final_model,exist_ok=True)
             os.makedirs(self.trans_config.data_transformation_dir,exist_ok=True)
             os.makedirs(self.trans_config.transformed_object,exist_ok=True)
             os.makedirs(self.trans_config.transformed_files,exist_ok=True)
@@ -104,6 +107,7 @@ class DataTransform:
 
 
             save_object(file_path=self.trans_config.preprocessing_path,obj=preproccessor)
+            save_object(file_path=self.trans_config.final_preprocessing_path,obj=preproccessor)
 
             return(train_trans,valid_trans,test_trans,self.trans_config.preprocessing_path)
 

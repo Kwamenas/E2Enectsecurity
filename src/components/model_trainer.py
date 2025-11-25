@@ -13,6 +13,9 @@ from sklearn.ensemble import RandomForestClassifier,GradientBoostingClassifier,A
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.linear_model import LogisticRegression
 from xgboost import XGBClassifier
+import mlflow
+##import dagshub
+##dagshub.init(repo_owner='Kwamenas', repo_name='E2Enectsecurity', mlflow=True)
 
 @dataclass
 
@@ -83,7 +86,7 @@ class Modelinitiation:
             },
             "Gradient Boosting":{
                 'learning_rate':[.1,.01,.05,.001],
-                'subsample':[0,6,0.7,0.75,0.85,0.9],
+                'subsample':[0.6,0.7,0.75,0.85,0.9],
                 'n_estimators':[8,16,32,64,128,256]
             },
             "Logistic Regression":{},
@@ -101,7 +104,7 @@ class Modelinitiation:
 
         }
 
-        df=train_evaluate_model(models=models,X_train=X_train,y_train=y_train,
+        df,best_estimators=train_evaluate_model(models=models,X_train=X_train,y_train=y_train,
                                 X_valid=X_valid,y_valid=y_valid,X_test=X_test,y_test=y_test,
                                 param_grid=param_grid)
         #result_df=df.reset_index()
@@ -111,7 +114,17 @@ class Modelinitiation:
         best_row = test_df.iloc[0]
         best_model_name=best_row["Model"]
         best_model_score=best_row['f1']
-        best_model=models[best_model_name]
+        best_model=best_estimators[best_model_name]
+
+        with mlflow.start_run(run_name='best_overall_model'):
+            mlflow.log_param("best_model_name",best_model_name)
+            try:
+                if best_model_name.lower().startswith("xgboost"):
+                    mlflow.xgboost.log_model(best_model,artifact_path=f"{best_model_name}_model")
+                else:
+                    mlflow.sklearn.log_model(best_model,artifact_path=f"{best_model_name}_model")
+            except Exception:
+                mlflow.pyfunc.log_model(artifact_path=f"{best_model_name}_model",python_model=best_model)
 
         if best_model_score < 0.6:
             raise CustomException("No best model found")
