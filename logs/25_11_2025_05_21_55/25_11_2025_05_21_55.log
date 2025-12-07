@@ -1,0 +1,72 @@
+[ 2025-11-25 05:22:09,377 ] 13 root - INFO - Starting Data Ingestion Pipeline...
+[ 2025-11-25 05:22:10,158 ] 40 root - INFO - MongoDB client initialized successfully 
+[ 2025-11-25 05:22:10,159 ] 37 root - INFO - DataIngest class initialized successfully.
+[ 2025-11-25 05:22:16,401 ] 73 root - INFO - fetched 11055 documents from KNAS68.NetworkData
+[ 2025-11-25 05:22:16,410 ] 45 root - INFO - Successfully fetched 11055 records from MongoDB.
+[ 2025-11-25 05:22:16,478 ] 47 root - INFO - Data successfully fetched and saved to feature store
+[ 2025-11-25 05:22:16,479 ] 54 root - INFO - Train test split initiation
+[ 2025-11-25 05:22:16,551 ] 62 root - INFO - Train data saved to artifacts\Ingest\train.csv
+[ 2025-11-25 05:22:16,552 ] 63 root - INFO - Valid data saved to artifacts\Ingest\valid.csv
+[ 2025-11-25 05:22:16,552 ] 64 root - INFO - Test data saved to artifacts\Ingest\test.csv
+[ 2025-11-25 05:22:16,552 ] 65 root - INFO - Data Split Conpleted
+[ 2025-11-25 05:22:16,552 ] 50 root - INFO - All validation directories created successfully.
+[ 2025-11-25 05:22:16,592 ] 64 root - INFO - Data schema created at: data_schema\data_schema.yaml
+[ 2025-11-25 05:22:16,678 ] 37 root - INFO - Required number of cols:31
+[ 2025-11-25 05:22:16,679 ] 38 root - INFO - DataFrame has columns:Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2025-11-25 05:22:16,680 ] 37 root - INFO - Required number of cols:31
+[ 2025-11-25 05:22:16,680 ] 38 root - INFO - DataFrame has columns:Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2025-11-25 05:22:16,684 ] 37 root - INFO - Required number of cols:31
+[ 2025-11-25 05:22:16,684 ] 38 root - INFO - DataFrame has columns:Index(['having_IP_Address', 'URL_Length', 'Shortining_Service',
+       'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix',
+       'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length',
+       'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor',
+       'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL',
+       'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe',
+       'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank',
+       'Google_Index', 'Links_pointing_to_page', 'Statistical_report',
+       'Result'],
+      dtype='object')
+[ 2025-11-25 05:22:16,758 ] 66 root - INFO - Drift report written to: artifacts\validation\drift_report\report.yaml
+[ 2025-11-25 05:22:16,812 ] 114 root - INFO - Validated files saved to: artifacts\validation\validated
+[ 2025-11-25 05:22:16,813 ] 24 root - INFO - Data ingestion and validation pipeline completed successfully.
+[ 2025-11-25 05:22:16,813 ] 29 root - INFO - Starting Data Transformation Pipeline...
+[ 2025-11-25 05:22:16,838 ] 43 root - INFO - Loaded train data from artifacts\validation\validated successfully
+[ 2025-11-25 05:22:16,842 ] 46 root - INFO - Columns have been split into cat_cols: [] and numeric_cols: ['having_IP_Address', 'URL_Length', 'Shortining_Service', 'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix', 'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length', 'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor', 'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL', 'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe', 'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank', 'Google_Index', 'Links_pointing_to_page', 'Statistical_report']
+[ 2025-11-25 05:22:16,917 ] 43 root - INFO - Loaded train data from artifacts\validation\validated successfully
+[ 2025-11-25 05:22:16,920 ] 46 root - INFO - Columns have been split into cat_cols: [] and numeric_cols: ['having_IP_Address', 'URL_Length', 'Shortining_Service', 'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix', 'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length', 'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor', 'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL', 'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe', 'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank', 'Google_Index', 'Links_pointing_to_page', 'Statistical_report']
+[ 2025-11-25 05:22:16,922 ] 80 root - INFO - Applying preprocessing object on datasets
+[ 2025-11-25 05:22:16,954 ] 42 root - INFO - Loading numpy files from transformed path
+[ 2025-11-25 05:22:16,983 ] 47 root - INFO - resplitting the array in to X_train,y_train
+[ 2025-11-25 05:22:16,983 ] 30 root - INFO - Starting GridSearchCV for Random Forest
+[ 2025-11-25 05:22:32,970 ] 40 root - INFO - Best parameters for Random Forest: {'max_features': 'sqrt', 'n_estimators': 256}
+[ 2025-11-25 05:22:44,506 ] 30 root - INFO - Starting GridSearchCV for Decision Tree
+[ 2025-11-25 05:22:44,790 ] 40 root - INFO - Best parameters for Decision Tree: {'criterion': 'log_loss'}
+[ 2025-11-25 05:22:49,394 ] 30 root - INFO - Starting GridSearchCV for Gradient Boosting
+[ 2025-11-25 05:24:44,155 ] 40 root - INFO - Best parameters for Gradient Boosting: {'learning_rate': 0.1, 'n_estimators': 256, 'subsample': 0.6}
+[ 2025-11-25 05:24:51,304 ] 30 root - INFO - Starting GridSearchCV for Logistic Regression
+[ 2025-11-25 05:24:51,607 ] 40 root - INFO - Best parameters for Logistic Regression: {}
+[ 2025-11-25 05:24:57,886 ] 30 root - INFO - Starting GridSearchCV for Adaboost
+[ 2025-11-25 05:25:20,965 ] 40 root - INFO - Best parameters for Adaboost: {'learning_rate': 0.1, 'n_estimators': 256}
+[ 2025-11-25 05:25:27,245 ] 30 root - INFO - Starting GridSearchCV for Xgboost
+[ 2025-11-25 05:31:36,086 ] 40 root - INFO - Best parameters for Xgboost: {'booster': 'gbtree', 'learning_rate': 0.1, 'n_estimators': 256}
+[ 2025-11-25 05:31:49,785 ] 132 root - INFO - Best model is Random Forest
+[ 2025-11-25 05:31:49,829 ] 46 root - INFO - \u2705 Training complete. Best model: Random Forest (F1: 0.9750)
+[ 2025-11-25 05:31:49,829 ] 47 root - INFO - \u2705 Training complete. Best model: RandomForestClassifier(n_estimators=256, verbose=1) )
