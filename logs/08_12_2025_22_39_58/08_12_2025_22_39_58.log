@@ -1,0 +1,22 @@
+[ 2025-12-08 22:40:26,922 ] 17 root - ERROR - Exception type: AttributeError
+Message: 'PredictionConfig' object has no attribute 'pred_path'
+Traceback:   File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\src\pipeline\predict_pipeline.py", line 21, in __init__
+    os.makedirs(self.config.pred_path, exist_ok=True)
+                ^^^^^^^^^^^^^^^^^^^^^
+
+
+[ 2025-12-08 22:40:26,926 ] 17 root - ERROR - Exception type: CustomException
+Message: Exception type: AttributeError
+Message: 'PredictionConfig' object has no attribute 'pred_path'
+Traceback:   File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\src\pipeline\predict_pipeline.py", line 21, in __init__
+    os.makedirs(self.config.pred_path, exist_ok=True)
+                ^^^^^^^^^^^^^^^^^^^^^
+
+
+Traceback:   File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\app.py", line 48, in predict_route
+    predictor=PredictionPipeline()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\src\pipeline\predict_pipeline.py", line 26, in __init__
+    raise CustomException(e)
+
+

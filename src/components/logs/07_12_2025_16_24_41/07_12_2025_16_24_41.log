@@ -1,0 +1,14 @@
+[ 2025-12-07 16:26:17,905 ] 17 root - ERROR - Exception type: FileNotFoundError
+Message: [Errno 2] No such file or directory: 'final_model\\model.pkl'
+Traceback:   File "c:\Users\HP\Desktop\ML Projects\E2Enectsecurity\src\utils\main_utils\calls_utils.py", line 85, in load_object
+    with open(file_path,"rb") as file_obj:
+         ^^^^^^^^^^^^^^^^^^^^
+
+
+[ 2025-12-07 16:37:14,481 ] 17 root - ERROR - Exception type: FileNotFoundError
+Message: [Errno 2] No such file or directory: 'C:\\Users\\HP\\Desktop\\ML Projects\\E2Enectsecurity\\artifacts\\final_model\\model.pkl'
+Traceback:   File "c:\Users\HP\Desktop\ML Projects\E2Enectsecurity\src\utils\main_utils\calls_utils.py", line 85, in load_object
+    with open(file_path,"rb") as file_obj:
+         ^^^^^^^^^^^^^^^^^^^^
+
+

@@ -1,0 +1,22 @@
+[ 2025-12-08 22:21:23,942 ] 17 root - ERROR - Exception type: AttributeError
+Message: 'PredictionPipeline' object has no attribute 'preprocessor'
+Traceback:   File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\src\pipeline\predict_pipeline.py", line 31, in predict
+    transformed_data = self.preprocessor.transform(df)
+                       ^^^^^^^^^^^^^^^^^
+
+
+[ 2025-12-08 22:21:23,944 ] 17 root - ERROR - Exception type: CustomException
+Message: Exception type: AttributeError
+Message: 'PredictionPipeline' object has no attribute 'preprocessor'
+Traceback:   File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\src\pipeline\predict_pipeline.py", line 31, in predict
+    transformed_data = self.preprocessor.transform(df)
+                       ^^^^^^^^^^^^^^^^^
+
+
+Traceback:   File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\app.py", line 49, in predict_route
+    df=predictor.predict(df)
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\src\pipeline\predict_pipeline.py", line 39, in predict
+    raise CustomException(e)
+
+

@@ -1,0 +1,14 @@
+[ 2025-12-07 14:15:00,091 ] 17 root - ERROR - Exception type: TypeError
+Message: 'module' object is not callable
+Traceback:   File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\app.py", line 32, in train_route
+    train_pipe=train_pipeline()
+               ^^^^^^^^^^^^^^^^
+
+
+[ 2025-12-07 14:15:01,721 ] 17 root - ERROR - Exception type: TypeError
+Message: 'module' object is not callable
+Traceback:   File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\app.py", line 32, in train_route
+    train_pipe=train_pipeline()
+               ^^^^^^^^^^^^^^^^
+
+

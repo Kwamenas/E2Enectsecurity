@@ -1,0 +1,49 @@
+[ 2025-12-08 22:27:00,102 ] 24 root - INFO - Successfully loaded objects
+[ 2025-12-08 22:27:00,335 ] 17 root - ERROR - Exception type: PermissionError
+Message: [Errno 13] Permission denied: 'Predict_Output\\Pred_folder\\pred.csv'
+Traceback:   File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\src\pipeline\predict_pipeline.py", line 36, in predict
+    df_copy.to_csv(self.config.pred_file, index=False)
+  File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\myenv\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\myenv\Lib\site-packages\pandas\core\generic.py", line 3989, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\myenv\Lib\site-packages\pandas\io\formats\format.py", line 1014, in to_csv
+    csv_formatter.save()
+  File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\myenv\Lib\site-packages\pandas\io\formats\csvs.py", line 251, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\myenv\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+
+
+[ 2025-12-08 22:27:00,336 ] 17 root - ERROR - Exception type: CustomException
+Message: Exception type: PermissionError
+Message: [Errno 13] Permission denied: 'Predict_Output\\Pred_folder\\pred.csv'
+Traceback:   File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\src\pipeline\predict_pipeline.py", line 36, in predict
+    df_copy.to_csv(self.config.pred_file, index=False)
+  File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\myenv\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\myenv\Lib\site-packages\pandas\core\generic.py", line 3989, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\myenv\Lib\site-packages\pandas\io\formats\format.py", line 1014, in to_csv
+    csv_formatter.save()
+  File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\myenv\Lib\site-packages\pandas\io\formats\csvs.py", line 251, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\myenv\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+
+
+Traceback:   File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\app.py", line 49, in predict_route
+    df=predictor.predict(df)
+       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Desktop\ML Projects\E2Enectsecurity\src\pipeline\predict_pipeline.py", line 39, in predict
+    raise CustomException(e)
+
+
