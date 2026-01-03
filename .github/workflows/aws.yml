@@ -94,7 +94,7 @@ jobs:
       - name: Run new container
         run: |
           echo "🚀 Starting new container..."
-          docker run -d -p 8080:8080 \
+          docker run -d -p 8000:8000 \
             --ipc="host" \
             --name=mltest \
             -e AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} \
