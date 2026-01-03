@@ -5,13 +5,19 @@ from src.components.data_ingestion import DataIngestionConfig,DataIngest
 from src.components.data_validation import DatavalidationConfig,DataValidation
 from src.components.data_transformation import DataTransform,DataTransformationConfig
 from src.components.model_trainer import Modelconfig,Modelinitiation
+from src.cloud.s3_syncer import S3Sync
+from pathlib import Path
 from dotenv import load_dotenv
+import os
 load_dotenv()
 
 
 class train_pipe():
     def __init__(self):
-        pass
+        self.artifact_dir :Path= Path("artifacts")
+        self.final_dir :Path=Path("final_model")
+        self.aws_bucket_name=os.getenv("AWS_BUCKET_NAME")
+        self.S3_sync=S3Sync()
 
     def start_ingest(self):
         try:
@@ -63,12 +69,35 @@ class train_pipe():
         except Exception as e:
             raise CustomException(e)
         
+    def sync_artifact_dir_to_s3(self):
+        try:
+            from datetime import datetime
+            timestamp=datetime.now().strftime("%Y%m%d_%H%M%S")
+            aws_bucket_url=f"s3://{self.aws_bucket_name}/artifact/{timestamp}"
+            self.S3_sync.sync_folder_to_s3(self.artifact_dir,aws_bucket_url)
+
+        except Exception as e:
+            raise CustomException(e)
+        
+    def sync_model_dir_to_s3(self):
+        try:
+            from datetime import datetime
+            timestamp=datetime.now().strftime("%Y%m%d_%H%M%S")
+            aws_bucket_url=f"s3://{self.aws_bucket_name}/final_model/{timestamp}"
+            self.S3_sync.sync_folder_to_s3(self.final_dir,aws_bucket_url)
+
+        except Exception as e:
+            raise CustomException(e)
+
+        
     def run_pipeline(self):
         try:
             self.start_ingest()
             self.start_validation()
             self.start_transformation()
             self.start_model_trainer()
+            self.sync_artifact_dir_to_s3()
+            self.sync_model_dir_to_s3()
             logging.info("Full pipeline run completed successfully.")
         except Exception as e:
             raise CustomException(e)
