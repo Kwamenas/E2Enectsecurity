@@ -11,6 +11,7 @@ from uvicorn import run as app_run
 from fastapi.responses import Response
 from fastapi.middleware.cors import CORSMiddleware
 from starlette.responses import RedirectResponse
+import numpy
 
 app=FastAPI()
 
